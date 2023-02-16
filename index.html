@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- link tailwind  -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- link icon  -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+</head>
+<body class="bg-gradient-to-r from-slate-300 to-slate-700 text-white">
+    <h1 class="text-5xl text-black text-center font-extrabold mb-10 mt-5" >Money Hunter <i class="bi bi-coin text-yellow-500"></i></h1>
+    <div class="flex justify-around">
+        <div class="pb-5">
+            <img src="image/money.jpg" alt="" class="h-full rounded-md">
+        </div>
+        <div class="w-2/5">
+            <div class="grid grid-cols-3 mb-5">
+                <h2 class="uppercase text-lg font-bold text-center col-span-3">income</h2>
+                <label for="incomeField" class="text-lg font-semibold">Income: </label>
+                <input type="text" id="incomeField" class="px-2 py-1 rounded-md mb-2 mt-1 col-span-2 focus:bg-slate-300 text-slate-800">
+            </div>
+            <div class="grid grid-cols-3 mb-5">
+                <h2 class="uppercase text-lg font-bold text-center col-span-3">Expenses</h2>
+                <label for="foodField" class="text-lg font-semibold">Food:</label>
+                <input type="text" id="foodCost" class="px-2 py-1 rounded-md mb-2 mt-1 col-span-2 focus:bg-slate-300 text-slate-800">
+                <label for="rentField" class="text-lg font-semibold">Rent:</label>
+                <input type="text"  id="rentCost" class="px-2 py-1 rounded-md mb-2 mt-1 col-span-2 focus:bg-slate-300 text-slate-800">
+                <label for="clotheField" class="text-lg font-semibold">Clothes:</label>
+                <input type="text" id="clotheCost" class="px-2 py-1 rounded-md mb-2 mt-1 col-span-2 focus:bg-slate-300 text-slate-800">
+            </div>
+            <button class="bg-yellow-500 hover:bg-yellow-600 hover:text-white text-black px-4 py-2 rounded-lg block mx-auto text font-semibold w-1/2 mb-5P" onclick="calculate()">Calculate</button>
+            <div class="flex justify-between">
+                <h2 class="uppercase text-lg font-bold text-center col-span-3">Total Expenses</h2> 
+                <h2 class="uppercase text-lg font-bold text-center col-span-3">$ <span id="total-cost">0</span></h2>     
+            </div>
+            <div class="flex justify-between mb-5">
+                <h2 class="uppercase text-lg font-bold text-center col-span-3">Balance</h2> 
+                <h2 class="uppercase text-lg font-bold text-center col-span-3">$ <span id="balance">0</span></h2>     
+            </div>
+            <div class="text-center">
+                <label for="saveField" class="text-lg font-semibold">Save: </label>
+                <input type="number" class="px-2 py-1 rounded-md mb-2 mt-1 col-span-2 focus:bg-slate-300 text-slate-800 mx-4 w-16 text-center" id="save"><span>%</span>
+                <button class="bg-yellow-500 hover:bg-yellow-600 hover:text-white text-black px-4 py-2 rounded-lg text font-semibold mx-3" onclick="btnSave()">Save</button>
+                <div class="flex justify-between">
+                    <h2 class="uppercase text-lg font-bold text-center col-span-3">Saving Amount</h2> 
+                    <h2 class="uppercase text-lg font-bold text-center col-span-3">$ <span id="saving-amount">0</span></h2>     
+                </div>
+                <div class="flex justify-between">
+                    <h2 class="uppercase text-lg font-bold text-center col-span-3">Remaining Balance</h2> 
+                    <h2 class="uppercase text-lg font-bold text-center col-span-3">$ <span id="remaining-balance">0</span></h2>     
+                </div>
+            </div>
+            <button class="bg-yellow-500 hover:bg-yellow-600 hover:text-white text-black px-4 py-2 rounded-lg block mx-auto text font-semibold w-full my-5" onclick="refresh()">Refresh</button>
+        </div>
+    </div>
+
+    <!-- link js  -->
+    <script src="allFunction.js"></script>
+    <script src="code.js"></script>
+</body>
+</html>
